@@ -2,10 +2,6 @@
 Imports Patagames.Ocr
 Public Module Fun
 
-    '// Developing :
-    '// Many Languages { For Each One : TessData, Symbol, Encoding }
-    '// Use RegisterHotKey, To use any HotKey
-    '// Improve Auto Correct System After OCR Before Translating The Text 
 
 #Region "Translating OCR & WebRequest Stuff ..."
     Dim API As Patagames.Ocr.OcrApi
@@ -28,8 +24,8 @@ Public Module Fun
             End Using
 
             '// Bypass Patagames OCR Limition ... 
-            '// Width Must Be Smaller Than 500 || For other images the allowed widths are 500 - 550 pixels; 600 - 650 pixels; 700 - 750 pixels and so on  
-            '// As A Result Of That, We Will Increase Width,, Rather Than Cracking Dll File !
+            '// Width Must Be Smaller Than 500 || For other images, the allowed widths are 500 - 550 pixels; 600 - 650 pixels; 700 - 750 pixels and so on  
+            '// As A Result Of That, We Will Increase Width 
             Dim Bit As Bitmap
             If x.Width >= 550 And ((x.Width \ 50) Mod 2 = 1 Or x.Width Mod 50 = 0) Then '// ### Between xx51 And xx99 OR 800,,600,,750,,650
                 Dim NewWidth As Int32

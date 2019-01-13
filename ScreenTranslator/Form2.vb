@@ -74,11 +74,7 @@ Public Class Form2
         Dim FirstStart As Boolean
         FirstStart = Not My.Computer.FileSystem.FileExists(Path)
         If FirstStart Then
-            Dim msg As String = "Please ,,, This program was developed to be a quick and simple translator from English language to Arabic language for special purpose." + vbCrLf + vbCrLf
-            msg += "If you want to develop it, you can download TessData for the language you want and a little things in this source code ..." + vbCrLf + vbCrLf
-            msg += "After you start the program, you need to press {Ctrl} & {Shift} to translate a text directly from screen,"
-            msg += "or you can copy any text after selection by {Ctrl} + {C Key}, Then Press {Ctrl} + {Alt} To Show The Translation of the copied text."
-            msg += vbCrLf + vbCrLf + "Do you want the system to run this program at startup ?"
+            Dim msg As String = "Do you want the system to run this program at startup ?"
 
             If MessageBox.Show(msg, "INFO ...", MessageBoxButtons.YesNo, MessageBoxIcon.Information) = Windows.Forms.DialogResult.Yes Then
                 My.Computer.Registry.SetValue("HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run", My.Application.Info.ProductName, """" + Application.ExecutablePath + """")
